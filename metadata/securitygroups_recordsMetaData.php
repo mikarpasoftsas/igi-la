@@ -259,9 +259,22 @@ $dictionary['securitygroups_records'] = array (
 			'relationship_type'=>'many-to-many',
 			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
 			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_WaitingList'),	
+		//17
+		'securitygroups_aos_product_categories' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'AOS_Product_Categories', 'rhs_table'=> 'aos_product_categories', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'AOS_Product_Categories'),	
 			
-			
-
+		//18
+		'securitygroups_mks_categorytypesmovement' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_CategoryTypesMovement', 'rhs_table'=> 'mks_categorytypesmovement', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_CategoryTypesMovement'),				
+				
 	)
 );
 
